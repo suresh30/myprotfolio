@@ -19,7 +19,7 @@ const Navbar = () => {
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((nv) => {
             return <li key={nv.id} className={`${active === nv.title ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`} onClick={() => setActive(nv.title)}>
-              <a href={`${nv.id}`}>{nv.title}</a>
+              <a href={`#${nv.id}`}>{nv.title}</a>
             </li>
           })}
         </ul>
@@ -30,7 +30,7 @@ const Navbar = () => {
               {navLinks.map((nv) => {
                 return <li key={nv.id} className={`${active === nv.title ? "text-white" : "text-secondary"} font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => { setActive(nv.title); setToggle(!toggle) }}>
-                  <a href={`${nv.id}`}>{nv.title}</a>
+                  <a href={`#${nv.id}`}>{nv.title}</a>
                 </li>
               })}
             </ul>
